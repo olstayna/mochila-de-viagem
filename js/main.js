@@ -77,3 +77,11 @@ function deletaElemento(tag, id) {
 
     localStorage.setItem("itens", JSON.stringify(itens))
 }
+
+const limparButton = document.getElementById("limpar");
+
+limparButton.addEventListener("click", () => {
+    localStorage.removeItem("itens");
+    lista.innerHTML = "";
+    itens.length = 0;
+});
